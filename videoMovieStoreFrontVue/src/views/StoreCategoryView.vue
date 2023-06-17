@@ -2,18 +2,19 @@
   <div>
     <body class="d-flex h-100 text-center text-bg-dark">
       <div id="nav">
-        <router-link to="/store/romance"> Romance </router-link> -
-        <router-link to="/store/horror"> Horror </router-link> -
-        <router-link to="/store/animation"> Animation </router-link> -
-        <router-link to="/store/fantasy"> Fantasy </router-link> -
-        <router-link to="/store/thriller"> Thriller </router-link> -
-        <router-link to="/store/sci-fi"> Sci-Fi </router-link> -
-        <router-link to="/store/action"> Action </router-link> -
-        <router-link to="/store/crime"> Crime </router-link> -
-        <router-link to="/store/drama"> Drama </router-link> -
-        <router-link to="/store"> Geral </router-link> -
+        <router-link to="/store/food"> food </router-link> -
+        <router-link to="/store/romance"> romance </router-link> -
+        <router-link to="/store/horror"> horror </router-link> -
+        <router-link to="/store/animation"> animation </router-link> -
+        <router-link to="/store/fantasy"> fantasy </router-link> -
+        <router-link to="/store/thriller"> thriller </router-link> -
+        <router-link to="/store/sci-fi"> sci-fi </router-link> -
+        <router-link to="/store/action"> action </router-link> -
+        <router-link to="/store/crime"> crime </router-link> -
+        <router-link to="/store/drama"> drama </router-link> -
+        <router-link to="/store"> geral </router-link> -
         <router-link to="/Basket"
-          >Cart ({{ productsInBag.length }})</router-link
+          >cart ({{ productsInBag.length }})</router-link
         >
       </div>
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -52,7 +53,7 @@
         <div class="home">
           <div class="products">
             <div
-              v-for="(product, index) in fantasyMovies"
+              v-for="(product, index) in categoryMovies"
               :key="index"
               class="product"
               :class="{ inBag: isInBag(product) }"
@@ -74,7 +75,7 @@
               >
                 Remove
               </button>
-              <!-- <button @click="atualizarProduto">Atualizar Produto</button> -->
+              
             </div>
           </div>
         </div>
@@ -84,18 +85,18 @@
 </template>
 
 <script>
-// import axios from 'axios';
+
 import { mapState } from "vuex";
 export default {
-  name: "StoreFantasyView",
+  name: "StoreCategoryView",
   data() {
     return {};
   },
   components: {},
   computed: {
     ...mapState(["products", "productsInBag"]),
-    fantasyMovies() {
-      return this.products.filter((movie) => movie.category === "fantasy");
+    categoryMovies() {
+      return this.products.filter((movie) => movie.category === this.$route.params.category);
     },
   },
   methods: {
@@ -109,4 +110,3 @@ export default {
   },
 };
 </script>
-

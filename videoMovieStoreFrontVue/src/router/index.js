@@ -5,15 +5,8 @@ import Guard from '../services/middleware'
 import StoreView from '../views/StoreView.vue'
 import AboutView from '../views/AboutView.vue'
 import BasketView from '../views/BasketView.vue'
-import StoreDramaView from '../views/StoreDramaView.vue'
-import StoreCrimeView from '../views/StoreCrimeView.vue'
-import StoreActionView from '../views/StoreActionView.vue'
-import StoreScifiView from '../views/StoreScifiView.vue'
-import StoreThrillerView from '../views/StoreThrillerView.vue'
-import StoreFantasyView from '../views/StoreFantasyView.vue'
-import StoreAnimationView from '../views/StoreAnimationView.vue'
-import StoreHorrorView from '../views/StoreHorrorView.vue'
-import StoreRomanceView from '../views/StoreRomanceView.vue'
+import StoreCategoryView from '../views/StoreCategoryView.vue'
+import StoreFoodView from '../views/StoreFoodView.vue'
 
 const routes = [
   {
@@ -33,57 +26,16 @@ const routes = [
     
   },
   {
-    path: '/store/drama',
-    name: 'drama',
-    component: StoreDramaView,
-    
-  },
-  {
-    path: '/store/crime',
-    name: 'crime',
-    component: StoreCrimeView,
-    
-  },
-  {
-    path: '/store/action',
+    path: '/store/:category',
     name: 'action',
-    component: StoreActionView,
+    props: true,
+    component: StoreCategoryView,
     
   },
   {
-    path: '/store/sci-fi',
-    name: 'sci-fi',
-    component: StoreScifiView,
-    
-  },
-  {
-    path: '/store/thriller',
-    name: 'thriller',
-    component: StoreThrillerView,
-    
-  },
-  {
-    path: '/store/fantasy',
-    name: 'fantasy',
-    component: StoreFantasyView,
-    
-  },
-  {
-    path: '/store/animation',
-    name: 'animation',
-    component: StoreAnimationView,
-    
-  },
-  {
-    path: '/store/horror',
-    name: 'horror',
-    component: StoreHorrorView,
-    
-  },
-  {
-    path: '/store/romance',
-    name: 'romance',
-    component: StoreRomanceView,
+    path: '/store/food',
+    name: 'food',
+    component: StoreFoodView,
     
   },
   {

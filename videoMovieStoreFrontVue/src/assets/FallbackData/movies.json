@@ -158,6 +158,49 @@
     "description": "While home sick in bed, a young boy's grandfather reads him the story of a farmboy-turned-pirate who encounters numerous obstacles, enemies, and allies in his quest to be reunited with his true love.",
     "category": "romance",
     "image": "https://m.media-amazon.com/images/M/MV5BYzdiOTVjZmQtNjAyNy00YjA2LTk5ZTAtNmJkMGQ5N2RmNjUxXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg"
-  },
-]
+  }
+],
+"food": [
+    {
+      "id": 1,
+      "title": "Cheeseburger",
+      "price": 6.99,
+      "description": "A juicy beef patty topped with melted cheese, fresh lettuce, ripe tomatoes, and onions, served on a toasted bun.",
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1565299629-5f0f4d87b44d"
+    },
+    {
+      "id": 2,
+      "title": "Margherita Pizza",
+      "price": 9.99,
+      "description": "A classic pizza topped with fresh mozzarella cheese, sliced tomatoes, and basil leaves.",
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1560807707-9bcb732eaf1e"
+    },
+    {
+      "id": 3,
+      "title": "Chicken Caesar Salad",
+      "price": 8.99,
+      "description": "Crisp romaine lettuce topped with grilled chicken, Parmesan cheese, croutons, and creamy Caesar dressing.",
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1557425045-0c8cd9cda84d"
+    },
+    {
+      "id": 4,
+      "title": "Spaghetti Bolognese",
+      "price": 11.99,
+      "description": "A classic Italian pasta dish with spaghetti noodles and a rich, meaty Bolognese sauce.",
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1597017175513-57fabe9c9bbc"
+    },
+    {
+      "id": 5,
+      "title": "Sushi Platter",
+      "price": 14.99,
+      "description": "A selection of fresh and delicious sushi rolls, including California rolls, spicy tuna rolls, and salmon rolls.",
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1579981527312-8b2f4a85b5c9"
+    }
+  ]
+
 }

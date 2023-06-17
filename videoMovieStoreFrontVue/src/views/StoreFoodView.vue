@@ -1,19 +1,20 @@
 <template>
   <div>
-    <body class="d-flex h-100 text-center text-bg-dark">
+    <body class="d-flex h-100 text-center text-bg-dark"  style="background-image: url('https://i.imgur.com/juYeoYV.gif'); background-position: 50%; background-attachment: fixed; background-size: 10%;">
       <div id="nav">
-        <router-link to="/store/romance"> Romance </router-link> -
-        <router-link to="/store/horror"> Horror </router-link> -
-        <router-link to="/store/animation"> Animation </router-link> -
-        <router-link to="/store/fantasy"> Fantasy </router-link> -
-        <router-link to="/store/thriller"> Thriller </router-link> -
-        <router-link to="/store/sci-fi"> Sci-Fi </router-link> -
-        <router-link to="/store/action"> Action </router-link> -
-        <router-link to="/store/crime"> Crime </router-link> -
-        <router-link to="/store/drama"> Drama </router-link> -
-        <router-link to="/store"> Geral </router-link> -
+        <router-link to="/store/food"> <a style="color: rgb(55, 147, 110) ;">food</a> </router-link> -
+        <router-link to="/store/romance"> romance </router-link> -
+        <router-link to="/store/horror"> horror </router-link> -
+        <router-link to="/store/animation"> animation </router-link> -
+        <router-link to="/store/fantasy"> fantasy </router-link> -
+        <router-link to="/store/thriller"> thriller </router-link> -
+        <router-link to="/store/sci-fi"> sci-fi </router-link> -
+        <router-link to="/store/action"> action </router-link> -
+        <router-link to="/store/crime"> crime </router-link> -
+        <router-link to="/store/drama"> drama </router-link> -
+        <router-link to="/store"> geral </router-link> -
         <router-link to="/Basket"
-          >Cart ({{ productsInBag.length }})</router-link
+          >cart ({{ productsInBag.length }})</router-link
         >
       </div>
       <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -52,7 +53,7 @@
         <div class="home">
           <div class="products">
             <div
-              v-for="(product, index) in animationMovies"
+              v-for="(product, index) in food"
               :key="index"
               class="product"
               :class="{ inBag: isInBag(product) }"
@@ -74,8 +75,9 @@
               >
                 Remove
               </button>
-              <!-- <button @click="atualizarProduto">Atualizar Produto</button> -->
+              
             </div>
+            <h4 style="padding-top: 30%;padding-bottom: 32.5%;border: 3px solid #fff; background-color: rgb(55, 147, 110)"><a class="invisible">-----</a>Wait for the news in our Instagram :)<a class="invisible">-----</a></h4>
           </div>
         </div>
       </div>
@@ -84,18 +86,18 @@
 </template>
 
 <script>
-// import axios from 'axios';
+
 import { mapState } from "vuex";
 export default {
-  name: "StoreAnimationView",
+  name: "StoreFoodView",
   data() {
     return {};
   },
   components: {},
   computed: {
     ...mapState(["products", "productsInBag"]),
-    animationMovies() {
-      return this.products.filter((movie) => movie.category === "animation");
+    food() {
+      return this.$store.state.food;
     },
   },
   methods: {
@@ -110,3 +112,8 @@ export default {
 };
 </script>
 
+<style>
+.invisible{
+  opacity: 0%;
+}
+</style>

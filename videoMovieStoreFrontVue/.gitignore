@@ -2,6 +2,7 @@
 node_modules
 /dist
 
+#php -S localhost:8000 -t public
 
 # local env files
 .env.local

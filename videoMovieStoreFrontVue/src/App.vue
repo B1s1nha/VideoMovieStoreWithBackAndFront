@@ -36,7 +36,7 @@
   left: 0;
   width: 100%;
   text-align: center;
-  background-color: rgb(47, 62, 70);
+  background-color: rgb(47, 62, 70); 
   color: white;
 }
 </style>

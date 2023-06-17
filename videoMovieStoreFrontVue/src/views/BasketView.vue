@@ -1,9 +1,9 @@
 <template>
   <div class="basket" style="box-shadow: inset 0 0 0rem rgba(47, 62, 70,);">
     <div id="nav">
-      <router-link to="/store">Back to store</router-link> -
+      <router-link to="/store">back to store</router-link> -
       <router-link to="/Basket"
-        >Cart ({{ this.productsInBag.length }})</router-link
+        >cart ({{ this.productsInBag.length }})</router-link
       >
     </div>
     <div class="items">
